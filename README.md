@@ -1,133 +1,132 @@
 # Antigravity Kit
 
-> AI Agent templates with Skills, Agents, and Workflows
+> Modelos de Agentes de IA com Skills, Agentes e Workflows
 
-<div  align="center">
-    <a href="https://unikorn.vn/p/antigravity-kit?ref=unikorn" target="_blank"><img src="https://unikorn.vn/api/widgets/badge/antigravity-kit?theme=dark" alt="Antigravity Kit - Nổi bật trên Unikorn.vn" style="width: 210px; height: 54px;" width="210" height="54" /></a>
-    <a href="https://unikorn.vn/p/antigravity-kit?ref=unikorn" target="_blank"><img src="https://unikorn.vn/api/widgets/badge/antigravity-kit/rank?theme=dark&type=daily" alt="Antigravity Kit - Hàng ngày" style="width: 250px; height: 64px;" width="250" height="64" /></a>
-    <a href="https://launch.j2team.dev/products/antigravity-kit" target="_blank"><img src="https://launch.j2team.dev/badge/antigravity-kit/dark" alt="Antigravity Kit on J2TEAM Launch" width="250" height="54" /></a>
+<div align="center">
+    <a href="https://unikorn.vn/p/antigravity-kit?ref=unikorn" target="_blank"><img src="https://unikorn.vn/api/widgets/badge/antigravity-kit?theme=dark" alt="Antigravity Kit - Destaque no Unikorn.vn" style="width: 210px; height: 54px;" width="210" height="54" /></a>
+    <a href="https://unikorn.vn/p/antigravity-kit?ref=unikorn" target="_blank"><img src="https://unikorn.vn/api/widgets/badge/antigravity-kit/rank?theme=dark&type=daily" alt="Antigravity Kit - Ranking Diário" style="width: 250px; height: 64px;" width="250" height="64" /></a>
+    <a href="https://launch.j2team.dev/products/antigravity-kit" target="_blank"><img src="https://launch.j2team.dev/badge/antigravity-kit/dark" alt="Antigravity Kit no J2TEAM Launch" width="250" height="54" /></a>
 </div>
 
-## Quick Install
+## Instalação Rápida
 
 ```bash
 npx @vudovn/ag-kit init
 ```
 
-Or install globally:
+Ou instale globalmente:
 
 ```bash
 npm install -g @vudovn/ag-kit
 ag-kit init
 ```
 
-This installs the `.agent` folder containing all templates into your project.
+Isso instala a pasta `.agent` contendo todos os modelos no seu projeto.
 
-### ⚠️ Important Note on `.gitignore`
-If you are using AI-powered editors like **Cursor** or **Windsurf**, adding the `.agent/` folder to your `.gitignore` may prevent the IDE from indexing the workflows. This results in slash commands (like `/plan`, `/debug`) not appearing in the chat suggestion dropdown.
+### ⚠️ Nota Importante sobre o `.gitignore`
+Se você estiver usando editores baseados em IA como **Cursor** ou **Windsurf**, adicionar a pasta `.agent/` ao seu `.gitignore` pode impedir que a IDE indexe os workflows. Isso faz com que os comandos de barra (como `/plan`, `/debug`) não apareçam no menu de sugestões do chat.
 
-**Recommended Solution:**
-To keep the `.agent/` folder local (not tracked by Git) while maintaining AI functionality:
-1. Ensure `.agent/` is **NOT** in your project's `.gitignore`.
-2. Instead, add it to your local exclude file: `.git/info/exclude`
+**Solução Recomendada:**
+Para manter a pasta `.agent/` local (não monitorada pelo Git) mas manter a funcionalidade da IA:
+1. Garanta que `.agent/` **NÃO** esteja no `.gitignore` do seu projeto.
+2. Em vez disso, adicione-a ao seu arquivo de exclusão local: `.git/info/exclude`
 
-## What's Included
+## O que está Incluído
 
-| Component     | Count | Description                                                        |
-| ------------- | ----- | ------------------------------------------------------------------ |
-| **Agents**    | 20    | Specialist AI personas (frontend, backend, security, PM, QA, etc.) |
-| **Skills**    | 37    | Domain-specific knowledge modules                                  |
-| **Workflows** | 11    | Slash command procedures                                           |
-| **Modern ES** | 2026+ | **Next.js 16 & React 19 Native** (Cache Components, PPR, Proxy)    |
+| Componente    | Quantidade | Descrição                                                            |
+| ------------- | ---------- | -------------------------------------------------------------------- |
+| **Agentes**   | 20         | Personas especialistas em IA (frontend, backend, segurança, PM, etc) |
+| **Skills**    | 37         | Módulos de conhecimento específicos por domínio                       |
+| **Workflows** | 11         | Procedimentos de comandos de barra                                   |
+| **Modern ES** | 2026+      | **Next.js 16 & React 19 Nativo** (Cache Components, PPR, Proxy)      |
 
 
-## Usage
+## Como Usar
 
-### Using Agents
+### Usando Agentes
 
-**No need to mention agents explicitly!** The system automatically detects and applies the right specialist(s):
-
-```
-You: "Add JWT authentication"
-AI: 🤖 Applying @security-auditor + @backend-specialist...
-
-You: "Fix the dark mode button"
-AI: 🤖 Using @frontend-specialist...
-
-You: "Login returns 500 error"
-AI: 🤖 Using @debugger for systematic analysis...
-```
-
-**How it works:**
-
-- Analyzes your request silently
-
-- Detects domain(s) automatically (frontend, backend, security, etc.)
-- Selects the best specialist(s)
-- Informs you which expertise is being applied
-- You get specialist-level responses without needing to know the system architecture
-
-**Benefits:**
-
-- ✅ Zero learning curve - just describe what you need
-- ✅ Always get expert responses
-- ✅ Transparent - shows which agent is being used
-- ✅ Can still override by mentioning agent explicitly
-
-### Using Workflows
-
-Invoke workflows with slash commands:
-
-| Command          | Description                           |
-| ---------------- | ------------------------------------- |
-| `/brainstorm`    | Explore options before implementation |
-| `/create`        | Create new features or apps           |
-| `/debug`         | Systematic debugging                  |
-| `/deploy`        | Deploy application                    |
-| `/enhance`       | Improve existing code                 |
-| `/orchestrate`   | Multi-agent coordination              |
-| `/plan`          | Create task breakdown                 |
-| `/preview`       | Preview changes locally               |
-| `/status`        | Check project status                  |
-| `/test`          | Generate and run tests                |
-| `/ui-ux-pro-max` | Design with 50 styles                 |
-
-Example:
+**Não há necessidade de mencionar os agentes explicitamente!** O sistema detecta e aplica automaticamente o(s) especialista(s) correto(s):
 
 ```
-/brainstorm authentication system
-/create landing page with hero section
-/debug why login fails
+Você: "Adicione autenticação JWT"
+IA: 🤖 Aplicando @security-auditor + @backend-specialist...
+
+Você: "Corrija o botão do modo escuro"
+IA: 🤖 Usando @frontend-specialist...
+
+Você: "O login retorna erro 500"
+IA: 🤖 Usando @debugger para análise sistemática...
 ```
 
-### Using Skills
+**Como funciona:**
 
-Skills are loaded automatically based on task context. The AI reads skill descriptions and applies relevant knowledge.
+- Analisa sua solicitação silenciosamente
+- Detecta o(s) domínio(s) automaticamente (frontend, backend, segurança, etc.)
+- Seleciona o(s) melhor(es) especialista(s)
+- Informa qual especialidade está sendo aplicada
+- Você recebe respostas de nível especialista sem precisar conhecer a arquitetura do sistema
 
-## CLI Tool
+**Benefícios:**
 
-| Command         | Description                               |
-| --------------- | ----------------------------------------- |
-| `ag-kit init`   | Install `.agent` folder into your project |
-| `ag-kit update` | Update to the latest version              |
-| `ag-kit status` | Check installation status                 |
+- ✅ Curva de aprendizado zero - apenas descreva o que você precisa
+- ✅ Sempre obtenha respostas de especialistas
+- ✅ Transparente - mostra qual agente está sendo usado
+- ✅ Ainda pode ser substituído mencionando o agente explicitamente
 
-### Options
+### Usando Workflows (Fluxos de Trabalho)
+
+Invoque workflows com comandos de barra:
+
+| Comando          | Descrição                                 |
+| ---------------- | ----------------------------------------- |
+| `/brainstorm`    | Explore opções antes da implementação     |
+| `/create`        | Crie novos recursos ou aplicativos        |
+| `/debug`         | Depuração sistemática                     |
+| `/deploy`        | Implante a aplicação                      |
+| `/enhance`       | Melhore o código existente                |
+| `/orchestrate`   | Coordenação multi-agente                  |
+| `/plan`          | Crie um detalhamento de tarefas           |
+| `/preview`       | Visualize as mudanças localmente          |
+| `/status`        | Verifique o status do projeto             |
+| `/test`          | Gere e execute testes                     |
+| `/ui-ux-pro-max` | Design com 50 estilos                     |
+
+Exemplo:
+
+```
+/brainstorm sistema de autenticação
+/create landing page com seção hero
+/debug por que o login falha
+```
+
+### Usando Skills (Habilidades)
+
+As Skills são carregadas automaticamente com base no contexto da tarefa. A IA lê as descrições das habilidades e aplica o conhecimento relevante.
+
+## Ferramenta CLI
+
+| Comando         | Descrição                                    |
+| --------------- | -------------------------------------------- |
+| `ag-kit init`   | Instala a pasta `.agent` no seu projeto      |
+| `ag-kit update` | Atualiza para a versão mais recente          |
+| `ag-kit status` | Verifica o status da instalação              |
+
+### Opções
 
 ```bash
-ag-kit init --force        # Overwrite existing .agent folder
-ag-kit init --path ./myapp # Install in specific directory
-ag-kit init --branch dev   # Use specific branch
-ag-kit init --quiet        # Suppress output (for CI/CD)
-ag-kit init --dry-run      # Preview actions without executing
+ag-kit init --force        # Sobrescreve a pasta .agent existente
+ag-kit init --path ./myapp # Instala em um diretório específico
+ag-kit init --branch dev   # Usa uma branch específica
+ag-kit init --quiet        # Oprime a saída (para CI/CD)
+ag-kit init --dry-run      # Pré-visualiza ações sem executar
 ```
 
-## Documentation
+## Documentação
 
-- **[Web App Example](https://antigravity-kit.unikorn.vn/docs/guide/examples/brainstorm)** - Step-by-step guide to creating a web application
-- **[Online Docs](https://antigravity-kit.unikorn.vn/docs)** - Browse all documentation online
+- **[Exemplo de Web App](https://antigravity-kit.unikorn.vn/docs/guide/examples/brainstorm)** - Guia passo a passo para criar uma aplicação web
+- **[Documentação Online](https://antigravity-kit.unikorn.vn/docs)** - Navegue por toda a documentação online
 
-## Buy me coffee
+## Apoie o projeto
 
 <p align="center">
   <a href="https://buymeacoffee.com/vudovn">
@@ -135,12 +134,12 @@ ag-kit init --dry-run      # Preview actions without executing
   </a>
 </p>
 
-<p align="center"> - or - </p>
+<p align="center"> - ou - </p>
 
 <p align="center">
-  <img src="https://img.vietqr.io/image/mbbank-0779440918-compact.jpg" alt="Buy me coffee" width="200" />
+  <img src="https://img.vietqr.io/image/mbbank-0779440918-compact.jpg" alt="Apoie o projeto" width="200" />
 </p>
 
-## License
+## Licença
 
 MIT © Vudovn
